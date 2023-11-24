@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    background-color: #E87676;
+    color: #6E0028;
+}
+
+img{
+    width: 100%;
+    padding: 5px;
+}
+
+.termek{
+    display: grid;
+    grid-template-rows: 50px auto auto 50px;
+    background-color: #EBC9C9;
+    border: 1px solid black;
+}
+
+.kosarba{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    padding: 5px;
+}
+
+h1#kosartartalom{
+    padding-bottom: 15px;
+}
+
+p#p1{
+    text-align: left;
+}
+
+p#p2{
+    text-align: left;
+}
+
+p#p3{
+    text-align: left;
+}
+
+p#p4{
+    text-align: left;
+}
+
+p#ar1{
+    text-align: right;
+    padding-right: 5px;
+}
+
+p#ar2{
+    text-align: right;
+    padding-right: 5px;
+}
+
+p#ar3{
+    text-align: right;
+    padding-right: 5px;
+}
+
+p#ar4{
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    gap: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+li{
+    text-align: center;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #81002F;
+}
+
+p{
+    text-align: center;
+}
+
+div#kosarbanvan1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+div#kosarbanvan2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5px;
+}
+
+div#kosarbanvan3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5px;
+}
+
+div#osszeg{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "ar as"
+    "f f";
+    background-color: #F7A4A4;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-area: ar;
+    padding: 5px;
+    gap: 5px;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    padding-top: 10px;
+    grid-area: f;
+}
+
+@media screen and (max-width:800px) {
+
+}
+
+@media screen and (max-width:500px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    body{
+        width: 100%;
+        font-size: 5vw;
+    }
+    article{
+        grid-template-columns: 1fr;
+    }
+}
